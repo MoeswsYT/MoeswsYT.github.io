@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pawn Launcher is a fast, lightweight Windows launcher with a clean interface, simple installation, and transparent download information." />
+  <title>Pawn Launcher — Fast Minecraft Launcher for Windows</title>
+  <link rel="icon" type="image/png" href="pawn.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google AdSense verification script: insert the approved script code here. -->
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header>
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="navbar__inner">
+        <a href="index.html" class="logo-link" data-home aria-label="Pawn Launcher — Home">
+          <img src="pawn.png" alt="" class="logo-img" width="38" height="38" aria-hidden="true" />
+          <span class="logo-text" aria-hidden="true"><span class="logo-pawn">Pawn</span><span class="logo-launcher">Launcher</span></span>
+        </a>
+        <button class="nav-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        <ul class="nav-links" id="nav-links" role="list">
+          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#guide">Guide</a></li>
+          <li><a href="#about-panel" data-panel="about-panel">About</a></li>
+          <li><a href="#contact-panel" data-panel="contact-panel">Contact</a></li>
+          <li><a href="#privacy-panel" data-panel="privacy-panel">Privacy</a></li>
+          <li><a href="#terms-panel" data-panel="terms-panel">Terms</a></li>
+          <li><button class="nav-download-btn" id="open-download" aria-haspopup="dialog">Download</button></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="page">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__bg" aria-hidden="true"><div class="hero__orb hero__orb--1"></div><div class="hero__orb hero__orb--2"></div><div class="hero__grid"></div></div>
+      <div class="hero__content">
+        <p class="hero__eyebrow">A simpler way to start playing</p>
+        <h1 class="hero__title" id="hero-title"><span class="accent">Pawn</span> Your Minecraft Launcher</h1>
+        <p class="hero__subtitle">A fast, clean Windows launcher that gets you from desktop to game without the clutter.</p>
+        <div class="hero__actions">
+          <button class="btn btn--primary" id="hero-download-btn">Download Free</button>
+          <a href="#features" class="btn btn--ghost">Explore Features</a>
+        </div>
+        <div class="download-trust" aria-label="Download information">
+          <span class="download-trust__item"><strong>v1.0.0</strong> current release</span>
+          <span class="download-trust__item"><strong>17.4 MB</strong> installer</span>
+          <span class="trust-badge">✓ VirusTotal Verified</span>
+        </div>
+        <div class="hero__stats">
+          <div class="stat"><span class="stat__value">Free</span><span class="stat__label">Forever</span></div><div class="stat__divider" aria-hidden="true"></div>
+          <div class="stat"><span class="stat__value">Windows</span><span class="stat__label">Native</span></div><div class="stat__divider" aria-hidden="true"></div>
+          <div class="stat"><span class="stat__value">&lt; 1 min</span><span class="stat__label">Setup</span></div>
+        </div>
+      </div>
+      <div class="hero__visual" aria-hidden="true">
+        <div class="mockup"><div class="mockup__bar"><span class="mockup__dot"></span><span class="mockup__dot"></span><span class="mockup__dot"></span><span class="mockup__title">Pawn Launcher</span></div><div class="mockup__body"><img src="pawn.png" alt="" class="mockup__logo" width="64" height="64" /><p class="mockup__name"><span style="color:var(--orange)">Pawn</span> Launcher</p><p class="mockup__ver">v1.0.0 — Ready</p><div class="mockup__btn">Launch</div></div></div><div class="mockup__glow"></div>
+      </div>
+    </section>
+
+    <section id="features" class="features-section" aria-labelledby="features-title">
+      <div class="section-inner">
+        <div class="section-header"><p class="section__label">Features</p><h2 class="section__title" id="features-title">Built to Stay Out of Your Way</h2><p class="section__sub">Every part of Pawn Launcher is focused on a predictable, uncluttered path from opening the app to launching your game.</p></div>
+        <div class="features-grid">
+          <article class="feature-card"><div class="feature-card__icon">⚡</div><h3 class="feature-card__title">Instant Launch</h3><p class="feature-card__desc">Open the launcher and get into your game quickly.</p></article>
+          <article class="feature-card"><div class="feature-card__icon">▦</div><h3 class="feature-card__title">Clean Interface</h3><p class="feature-card__desc">Everything important is visible without distracting menus.</p></article>
+          <article class="feature-card"><div class="feature-card__icon">✓</div><h3 class="feature-card__title">Transparent Download</h3><p class="feature-card__desc">See the version, file size, and safety notice before downloading.</p></article>
+          <article class="feature-card"><div class="feature-card__icon">▣</div><h3 class="feature-card__title">Windows Native</h3><p class="feature-card__desc">A familiar installer made for modern 64-bit Windows.</p></article>
+          <article class="feature-card"><div class="feature-card__icon">$</div><h3 class="feature-card__title">Completely Free</h3><p class="feature-card__desc">No subscription, paywall, or hidden upgrade.</p></article>
+          <article class="feature-card"><div class="feature-card__icon">↻</div><h3 class="feature-card__title">Easy Updates</h3><p class="feature-card__desc">Download the latest installer whenever a new version arrives.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="guide" class="content-section" aria-labelledby="guide-title">
+      <div class="section-inner">
+        <div class="content-section__intro"><p class="section__label">Installation &amp; usage</p><h2 class="section__title" id="guide-title">Get Started in Three Steps</h2><p>Pawn Launcher is designed for a simple first run. Follow the guide below, then keep the launcher available whenever you want a quick route into your game.</p></div>
+        <div class="steps-grid">
+          <article class="step-card"><span class="step-card__number">1</span><h3>Download</h3><p>Save <strong>PawnLauncher_Setup.exe</strong> to your computer.</p></article>
+          <article class="step-card"><span class="step-card__number">2</span><h3>Install</h3><p>Run the setup wizard and follow the Windows prompts.</p></article>
+          <article class="step-card"><span class="step-card__number">3</span><h3>Launch</h3><p>Open Pawn Launcher and select Launch when ready.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section content-section--alt" aria-labelledby="requirements-title">
+      <div class="section-inner">
+        <div class="content-section__intro"><p class="section__label">System requirements</p><h2 class="section__title" id="requirements-title">Runs Light</h2><p>Requirements for the launcher itself.</p></div>
+        <div class="requirements-table-wrap"><table class="requirements-table"><thead><tr><th>Component</th><th>Minimum</th><th>Recommended</th></tr></thead><tbody><tr><td>Operating system</td><td>Windows 10, 64-bit</td><td>Windows 11, 64-bit</td></tr><tr><td>Processor</td><td>Dual-core 2.0 GHz</td><td>Intel Core i3 / AMD Ryzen 3 or better</td></tr><tr><td>Memory</td><td>4 GB RAM</td><td>8 GB RAM</td></tr><tr><td>Storage</td><td>100 MB available space</td><td>250 MB available space</td></tr><tr><td>Internet</td><td>Required for download and online services</td><td>Stable broadband connection</td></tr></tbody></table></div>
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="faq-title">
+      <div class="section-inner"><div class="content-section__intro"><p class="section__label">FAQ</p><h2 class="section__title" id="faq-title">Quick Answers</h2></div>
+        <div class="faq-list">
+          <details class="faq-item"><summary>Is Pawn Launcher free to use?</summary><p class="faq-item__answer">Yes. The launcher is offered as a free Windows download. You can install and use it without a subscription or recurring payment.</p></details>
+          <details class="faq-item"><summary>Which operating systems are supported?</summary><p class="faq-item__answer">The current release is intended for 64-bit Windows 10 and Windows 11 systems. Older versions of Windows may not receive full support.</p></details>
+          <details class="faq-item"><summary>How large is the download?</summary><p class="faq-item__answer">The current installer is approximately 17.4 MB. Your browser may show a slightly different size because of download metadata or future release changes.</p></details>
+          <details class="faq-item"><summary>Does Pawn Launcher run in the background?</summary><p class="faq-item__answer">Pawn Launcher is intended to open when you need it and launch the selected game. Close it normally when you are finished.</p></details>
+          <details class="faq-item"><summary>What should I do if Windows shows a security warning?</summary><p class="faq-item__answer">Only continue if you downloaded the installer from the official website and trust the source. Check the file name and scan the installer with your preferred security tools before running it.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="screenshots-section" aria-labelledby="screenshots-title"><div class="section-inner"><div class="section-header"><p class="section__label">Screenshots</p><h2 class="section__title" id="screenshots-title">See It in Action</h2></div><div class="screenshots-grid"><figure class="screenshot-item"><img src="1.jpg" alt="Pawn Launcher screenshot 1" class="screenshot-img" loading="lazy" /></figure><figure class="screenshot-item"><img src="new.jpg" alt="Pawn Launcher screenshot 2" class="screenshot-img" loading="lazy" /></figure><figure class="screenshot-item"><img src="3.jpg" alt="Pawn Launcher screenshot 3" class="screenshot-img" loading="lazy" /></figure></div></div></section>
+    <section class="cta-strip" aria-labelledby="cta-title"><div class="cta-strip__inner"><div class="cta-strip__text"><h2 id="cta-title">Ready to get started?</h2><p>One download. One install. Zero hassle.</p></div><button class="btn btn--primary btn--lg" id="cta-download-btn">Download Pawn Launcher</button></div></section>
+  </main>
+
+  <footer role="contentinfo"><div class="footer__inner"><div class="footer__brand"><img src="pawn.png" alt="" width="28" height="28" aria-hidden="true" /><span><span style="color:var(--orange)">Pawn</span> Launcher</span></div><nav class="footer__links" aria-label="Footer navigation"><a href="#about-panel" data-panel="about-panel">About</a><a href="#contact-panel" data-panel="contact-panel">Contact</a><a href="#privacy-panel" data-panel="privacy-panel">Privacy</a><a href="#terms-panel" data-panel="terms-panel">Terms</a></nav><p class="footer__copy">&copy; 2026 Pawn Launcher. All rights reserved.</p></div></footer>
+
+  <div class="info-panel-overlay" id="info-panel-overlay" aria-hidden="true">
+    <section class="info-panel" role="dialog" aria-modal="true" aria-labelledby="info-panel-title" tabindex="-1">
+      <button class="info-panel__close" id="info-panel-close" aria-label="Close panel">×</button>
+      <p class="section__label" id="info-panel-label">Information</p>
+      <h2 class="info-panel__title" id="info-panel-title"></h2>
+      <div class="info-panel__content" id="info-panel-content"></div>
+    </section>
+  </div>
+
+  <template id="about-panel-template"><h3>A focused launcher</h3><p>Pawn Launcher keeps the path from desktop to game short, clear, and lightweight. No clutter, no subscription, just the tools you need.</p><h3>Our approach</h3><p>We prioritize fast startup, readable design, transparent downloads, and simple updates for Windows players.</p></template>
+  <template id="contact-panel-template"><h3>Need help?</h3><p>For feedback or installer support, email <a href="mailto:support@pawnlauncher.me">support@pawnlauncher.me</a>.</p><p>Please include your Windows version and a short description of the issue. Never send passwords or private security information.</p></template>
+  <template id="privacy-panel-template"><h3>Privacy at a glance</h3><p>We do not require an account to download Pawn Launcher. Contact messages include only the information you choose to send.</p><p>Cookies or advertising services may be used to operate and improve the site. You can manage cookies and personalized ads through your browser and Google Ads Settings.</p><p>Read the full <a href="privacy.html">Privacy Policy</a>.</p></template>
+  <template id="terms-panel-template"><h3>Before downloading</h3><p>Use the installer only on a compatible Windows device. Download it from this official website, keep Windows and antivirus software updated, and scan files before opening them.</p><p>By downloading, you accept the <a href="terms.html">Terms of Service &amp; Disclaimer</a>.</p></template>
+
+  <div class="modal-overlay" id="download-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true"><div class="modal" tabindex="-1"><button class="modal__close" id="modal-close" aria-label="Close download panel">×</button><img src="pawn.png" alt="" class="modal__logo" width="80" height="80" aria-hidden="true" /><h2 class="modal__title" id="modal-title">Download <span class="accent">Pawn</span> Launcher</h2><p class="modal__sub">Windows installer · v1.0.0 · 17.4 MB</p><label class="download-consent"><input type="checkbox" id="terms-consent" /><span>I have read and agree to the <a href="terms.html" target="_blank" rel="noopener">Terms of Service &amp; Disclaimer</a>.</span></label><a href="PawnLauncher_Setup.exe" download="PawnLauncher_Setup.exe" class="btn btn--primary btn--lg modal__dl-btn is-disabled" id="modal-download-link" aria-disabled="true">Agree to Terms to Download</a><div class="modal__meta"><span class="modal__tag">Windows</span><span class="modal__tag">✓ VirusTotal Verified</span></div></div></div>
+  <script src="script.js"></script><div id="page-transition" aria-hidden="true"></div>
+</body>
+</html>
