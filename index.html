@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0A0C10">
+<meta name="description" content="Pawn Launcher — a featherweight, ad-free Minecraft launcher for Windows.">
+<title>Pawn Launcher — Make Your Opening Move</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23FF6B00' d='M7 1h2v1H7z M6 2h4v3H6z M7 5h2v1H7z M5 6h6v1H5z M7 7h2v3H7z M6 10h4v1H6z M5 11h6v1H5z M4 12h8v1H4z M3 13h10v2H3z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Space+Grotesk:wght@300..700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="px-lava" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFB020"/><stop offset=".45" stop-color="#FF6B00"/><stop offset="1" stop-color="#D95C00"/>
+    </linearGradient>
+    <symbol id="pawn" viewBox="0 0 16 16">
+      <path shape-rendering="crispEdges" fill="url(#px-lava)" d="M7 1h2v1H7z M6 2h4v3H6z M7 5h2v1H7z M5 6h6v1H5z M7 7h2v3H7z M6 10h4v1H6z M5 11h6v1H5z M4 12h8v1H4z M3 13h10v2H3z"/>
+      <path shape-rendering="crispEdges" fill="#FFD98A" opacity=".85" d="M7 1h1v1H7z M6 2h1v2H6z"/>
+    </symbol>
+    <symbol id="i-bolt" viewBox="0 0 16 16"><path shape-rendering="crispEdges" d="M8 1h4v1H8z M7 2h4v1H7z M6 3h4v1H6z M5 4h8v1H5z M8 5h4v1H8z M7 6h4v1H7z M6 7h4v1H6z M5 8h4v1H5z M4 9h4v1H4z M4 10h3v1H4z M3 11h3v1H3z M3 12h2v1H3z M2 13h2v1H2z M2 14h1v1H2z"/></symbol>
+    <symbol id="i-pane" viewBox="0 0 16 16"><path shape-rendering="crispEdges" fill-rule="evenodd" d="M2 2h12v12H2z M4 6h8v6H4z M5 8h6v1H5z M5 10h4v1H5z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 16 16"><path shape-rendering="crispEdges" d="M3 1h10v5H3z M4 6h8v3H4z M5 9h6v2H5z M6 11h4v2H6z M7 13h2v1H7z"/></symbol>
+    <symbol id="i-win" viewBox="0 0 16 16"><path shape-rendering="crispEdges" d="M2 3h5v5H2z M9 3h5v5H9z M2 10h5v5H2z M9 10h5v5H9z"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 16 16"><path shape-rendering="crispEdges" d="M5 1h3v2H5z M8 1h3v2H8z M2 4h12v3H2z M3 8h4v6H3z M9 8h4v6H9z M7 4h2v10H7z"/></symbol>
+    <symbol id="i-cycle" viewBox="0 0 16 16"><path shape-rendering="crispEdges" d="M4 2h8v2H4z M12 4h2v5h-2z M10 9h6v1h-6z M11 10h4v1h-4z M12 11h2v1h-2z M4 12h8v2H4z M2 7h2v5H2z M1 6h4v1H1z M2 5h2v1H2z"/></symbol>
+    <symbol id="i-dl" viewBox="0 0 16 16"><path shape-rendering="crispEdges" d="M7 2h2v6H7z M4 8h8v1H4z M5 9h6v1H5z M6 10h4v1H6z M7 11h2v1H7z M2 11h2v3h8v-3h2v4H2z"/></symbol>
+    <symbol id="i-play" viewBox="0 0 16 16"><path shape-rendering="crispEdges" d="M4 2h2v12H4z M6 4h2v8H6z M8 6h2v4H8z M10 7h2v2h-2z"/></symbol>
+    <symbol id="i-stop" viewBox="0 0 16 16"><path shape-rendering="crispEdges" d="M3 3h10v10H3z"/></symbol>
+    <symbol id="i-world" viewBox="0 0 16 16"><path shape-rendering="crispEdges" fill-rule="evenodd" d="M2 2h12v12H2z M4 4h8v8H4z M7 4h2v8H7z M4 7h8v2H4z"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 16 16"><path shape-rendering="crispEdges" fill-rule="evenodd" d="M6 1h4v2H6z M6 13h4v2H6z M1 6h2v4H1z M13 6h2v4h-2z M3 3h2v2H3z M11 3h2v2h-2z M3 11h2v2H3z M11 11h2v2h-2z M5 5h6v6H5z M7 7h2v2H7z"/></symbol>
+    <symbol id="i-x" viewBox="0 0 16 16"><path shape-rendering="crispEdges" d="M2 2h2v2H2z M4 4h2v2H4z M6 6h4v4H6z M10 4h2v2h-2z M12 2h2v2h-2z M4 10h2v2H4z M2 12h2v2H2z M10 10h2v2h-2z M12 12h2v2h-2z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 16 16"><path shape-rendering="crispEdges" d="M2 8h2v2H2z M4 10h2v2H4z M6 12h2v2H6z M8 10h2v2H8z M10 8h2v2h-2z M12 6h2v2h-2z M14 4h2v2h-2z"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 16 16"><path shape-rendering="crispEdges" d="M2 5h2v2H2z M4 7h2v2H4z M6 9h4v2H6z M10 7h2v2h-2z M12 5h2v2h-2z"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
+
+<header class="navbar" id="navbar">
+  <div class="navbar__inner">
+    <a class="logo-link" href="#home" data-home aria-label="Pawn Launcher — back to top">
+      <svg class="logo-pawn" aria-hidden="true"><use href="#pawn"/></svg>
+      <span class="logo-word">Pawn<span class="logo-word__accent">Launcher</span></span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#features" data-spy="features">Features</a></li>
+        <li><a href="#preview" data-spy="preview">Preview</a></li>
+        <li><a href="#faq" data-spy="faq">FAQ</a></li>
+        <li><button class="nav-download-btn" type="button" data-open-download>
+          <svg class="icon" aria-hidden="true"><use href="#i-dl"/></svg>Download</button></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div id="page-transition" aria-hidden="true">
+  <svg class="page-transition__pawn"><use href="#pawn"/></svg>
+</div>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="hero__orb hero__orb--lava" data-parallax="0.10"></div>
+      <div class="hero__orb hero__orb--ender" data-parallax="0.16"></div>
+      <div class="hero__orb hero__orb--xp" data-parallax="0.06"></div>
+      <div class="hero__grid"></div>
+      <canvas id="ember-canvas"></canvas>
+      <div class="cube-slot cube-slot--1" data-parallax="0.22"><div class="cube-float"><div class="cube3d cube3d--grass" style="--s:64px"><div class="cube3d__inner"><i class="f f-front"></i><i class="f f-back"></i><i class="f f-left"></i><i class="f f-right"></i><i class="f f-top"></i><i class="f f-bottom"></i></div></div></div></div>
+      <div class="cube-slot cube-slot--2" data-parallax="0.14"><div class="cube-float cube-float--alt"><div class="cube3d cube3d--diamond" style="--s:42px"><div class="cube3d__inner"><i class="f f-front"></i><i class="f f-back"></i><i class="f f-left"></i><i class="f f-right"></i><i class="f f-top"></i><i class="f f-bottom"></i></div></div></div></div>
+      <div class="cube-slot cube-slot--3" data-parallax="0.30"><div class="cube-float"><div class="cube3d cube3d--gold" style="--s:30px"><div class="cube3d__inner"><i class="f f-front"></i><i class="f f-back"></i><i class="f f-left"></i><i class="f f-right"></i><i class="f f-top"></i><i class="f f-bottom"></i></div></div></div></div>
+    </div>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow" data-reveal><span class="pulse-dot" aria-hidden="true"></span>Free · Windows · No ads</p>
+      <h1 class="hero__title" data-reveal style="--d:.08s">Make your<br><span class="grad-text">opening move.</span></h1>
+      <p class="hero__subtitle" data-reveal style="--d:.16s">A featherweight, ad-free Minecraft launcher for Windows. Pick a version, press Launch, play.</p>
+      <div class="hero__actions" data-reveal style="--d:.24s">
+        <button class="btn btn--primary btn--lg" type="button" data-open-download>
+          <svg class="icon" aria-hidden="true"><use href="#i-dl"/></svg>Download free</button>
+        <a class="btn btn--ghost btn--lg" href="#features">See features
+          <svg class="icon" aria-hidden="true"><use href="#i-chev"/></svg></a>
+      </div>
+      <ul class="hero__meta" data-reveal style="--d:.32s">
+        <li><svg class="icon icon--check" aria-hidden="true"><use href="#i-check"/></svg>Free forever</li>
+        <li><svg class="icon icon--check" aria-hidden="true"><use href="#i-check"/></svg>Windows 10/11</li>
+        <li><svg class="icon icon--check" aria-hidden="true"><use href="#i-check"/></svg>No ads</li>
+      </ul>
+    </div>
+
+    <div class="hero__visual" data-reveal style="--d:.2s">
+      <div class="mockup-glow" aria-hidden="true"></div>
+      <div class="mockup" id="launcher-demo">
+        <div class="mockup__bar">
+          <span class="mockup__dot mockup__dot--r"></span><span class="mockup__dot mockup__dot--y"></span><span class="mockup__dot mockup__dot--g"></span>
+          <span class="mockup__title">Pawn Launcher</span>
+          <span class="mockup__chip">demo</span>
+        </div>
+        <div class="mockup__body">
+          <svg class="mockup__pawn" aria-hidden="true"><use href="#pawn"/></svg>
+          <p class="demo-status"><span class="status-dot" id="demo-status-dot" aria-hidden="true"></span><span id="demo-status-text" aria-live="polite">Ready</span></p>
+          <div class="demo-field">
+            <label for="demo-username">Username</label>
+            <input id="demo-username" type="text" value="Steve" maxlength="16" autocomplete="off" spellcheck="false">
+          </div>
+          <div class="demo-field">
+            <label for="demo-version">Version</label>
+            <select id="demo-version">
+              <option value="1.21.4">1.21.4 — Vanilla</option>
+              <option value="1.20.6">1.20.6 — Vanilla</option>
+              <option value="Fabric 1.21.4">Fabric 1.21.4</option>
+              <option value="Forge 1.20.1">Forge 1.20.1</option>
+              <option value="NeoForge 1.21.4">NeoForge 1.21.4</option>
+              <option value="26w46a" data-snapshot>26w46a — Snapshot</option>
+            </select>
+          </div>
+          <button class="launch-btn" id="demo-launch" type="button">
+            <svg class="icon i-when-idle" aria-hidden="true"><use href="#i-play"/></svg>
+            <svg class="icon i-when-running" aria-hidden="true"><use href="#i-stop"/></svg>
+            <span id="demo-launch-label">LAUNCH</span>
+          </button>
+          <div class="demo-progress" id="demo-progress" hidden>
+            <div class="demo-progress__track"><span id="demo-progress-fill"></span></div>
+            <span class="demo-progress__pct" id="demo-percent">0%</span>
+          </div>
+          <div class="demo-log" id="demo-log" hidden></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Vanilla</span><i>◆</i><span>Fabric</span><i>◆</i><span>Forge</span><i>◆</i><span>NeoForge</span><i>◆</i><span>Quilt</span><i>◆</i><span>Snapshots</span><i>◆</i><span>Modpacks</span><i>◆</i><span>OptiFine</span><i>◆</i>
+      <span>Vanilla</span><i>◆</i><span>Fabric</span><i>◆</i><span>Forge</span><i>◆</i><span>NeoForge</span><i>◆</i><span>Quilt</span><i>◆</i><span>Snapshots</span><i>◆</i><span>Modpacks</span><i>◆</i><span>OptiFine</span><i>◆</i>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <section class="features-section" id="features">
+    <div class="section-inner">
+      <header class="section-header" data-reveal>
+        <p class="section__label">Why Pawn</p>
+        <h2 class="section__title">Built to stay out of your way.</h2>
+      </header>
+      <div class="bento">
+        <article class="feature-card feature-card--wide" style="--hue:var(--lava)" data-reveal>
+          <div class="feature-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-bolt"/></svg></div>
+          <h3 class="feature-card__title">Instant launch</h3>
+          <p class="feature-card__desc">Cold start in under a second. No splash screens, no waiting.</p>
+          <div class="speed" aria-label="Cold start: Pawn 0.8 seconds, typical launcher 6 seconds">
+            <div class="speed-row"><span class="speed-row__label speed-row__label--hot">Pawn — 0.8 s</span><div class="speed-row__track"><span class="speed-row__fill speed-row__fill--hot" style="--w:14%"></span></div></div>
+            <div class="speed-row"><span class="speed-row__label">Typical — 6 s+</span><div class="speed-row__track"><span class="speed-row__fill" style="--w:100%"></span></div></div>
+          </div>
+        </article>
+        <article class="feature-card" style="--hue:var(--diamond);--d:.08s" data-reveal>
+          <div class="feature-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-pane"/></svg></div>
+          <h3 class="feature-card__title">Clean interface</h3>
+          <p class="feature-card__desc">No ads, no upsells — just the controls you need.</p>
+        </article>
+        <article class="feature-card" style="--hue:var(--xp);--d:.05s" data-reveal>
+          <div class="feature-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></div>
+          <h3 class="feature-card__title">Safe &amp; transparent</h3>
+          <p class="feature-card__desc">Signed installer. No background services, no telemetry.</p>
+        </article>
+        <article class="feature-card" style="--hue:var(--sky);--d:.12s" data-reveal>
+          <div class="feature-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-win"/></svg></div>
+          <h3 class="feature-card__title">Windows native</h3>
+          <p class="feature-card__desc">Built for Windows. Setup takes under a minute.</p>
+        </article>
+        <article class="feature-card" style="--hue:var(--gold);--d:.19s" data-reveal>
+          <div class="feature-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-gift"/></svg></div>
+          <h3 class="feature-card__title">Completely free</h3>
+          <p class="feature-card__desc">No subscriptions, no paywalls. Download, install, play.</p>
+        </article>
+        <article class="feature-card feature-card--full" style="--hue:var(--ender);--d:.1s" data-reveal>
+          <div class="feature-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-cycle"/></svg></div>
+          <div>
+            <h3 class="feature-card__title">Easy updates</h3>
+            <p class="feature-card__desc">Run the new installer — your settings carry over.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEPS -->
+  <section class="steps-section" id="how">
+    <div class="section-inner">
+      <header class="section-header" data-reveal>
+        <p class="section__label">The Opening</p>
+        <h2 class="section__title">Zero to overworld in three moves.</h2>
+      </header>
+      <ol class="steps">
+        <li class="step" data-reveal><span class="step__num" aria-hidden="true">01</span><h3>Download</h3><p>One file from this page.</p></li>
+        <li class="step" data-reveal style="--d:.12s"><span class="step__num" aria-hidden="true">02</span><h3>Install</h3><p>Next, next, done.</p></li>
+        <li class="step" data-reveal style="--d:.24s"><span class="step__num" aria-hidden="true">03</span><h3>Play</h3><p>Pick a version, press Launch.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-band" aria-label="Pawn Launcher by the numbers">
+    <div class="stats-band__inner">
+      <div class="stat-big" style="--hue:var(--lava)" data-reveal><span class="stat-big__value"><span class="stat-big__num" data-count="4" data-decimals="0">0</span></span><span class="stat-big__label">version channels</span></div>
+      <div class="stat-big" style="--hue:var(--diamond);--d:.08s" data-reveal><span class="stat-big__value"><span class="stat-big__num" data-count="0.8" data-decimals="1">0</span><span class="stat-big__suffix">s</span></span><span class="stat-big__label">cold start</span></div>
+      <div class="stat-big" style="--hue:var(--redstone);--d:.16s" data-reveal><span class="stat-big__value"><span class="stat-big__num" data-count="0" data-decimals="0">0</span><span class="stat-big__suffix">ads</span></span><span class="stat-big__label">ever</span></div>
+      <div class="stat-big" style="--hue:var(--xp);--d:.24s" data-reveal><span class="stat-big__value"><span class="stat-big__num" data-count="100" data-decimals="0">0</span><span class="stat-big__suffix">%</span></span><span class="stat-big__label">free</span></div>
+    </div>
+  </section>
+
+  <!-- LIVE PREVIEW -->
+  <section class="preview-section" id="preview">
+    <div class="section-inner">
+      <header class="section-header" data-reveal>
+        <p class="section__label">Live Preview</p>
+        <h2 class="section__title">Don't imagine it. Try it.</h2>
+        <p class="section__sub">These panels are live — try them.</p>
+      </header>
+
+      <div class="preview-tabs" role="tablist" aria-label="Launcher panels" id="preview-tabs" data-reveal>
+        <button role="tab" id="tab-play" data-tab="play" aria-selected="true" aria-controls="panel-play" type="button">Play</button>
+        <button role="tab" id="tab-worlds" data-tab="worlds" aria-selected="false" aria-controls="panel-worlds" tabindex="-1" type="button">Worlds</button>
+        <button role="tab" id="tab-settings" data-tab="settings" aria-selected="false" aria-controls="panel-settings" tabindex="-1" type="button">Settings</button>
+      </div>
+
+      <div class="frame" id="preview-frame" data-theme="ember" data-reveal style="--d:.1s">
+        <div class="frame__bar">
+          <span class="mockup__dot mockup__dot--r"></span><span class="mockup__dot mockup__dot--y"></span><span class="mockup__dot mockup__dot--g"></span>
+          <span class="mockup__title">Pawn Launcher — <span data-player-name>Steve</span></span>
+        </div>
+        <div class="frame__content">
+          <aside class="frame__sidebar">
+            <svg class="frame__pawn" aria-hidden="true"><use href="#pawn"/></svg>
+            <button class="side-btn is-active" type="button" data-tab="play"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg><span>Play</span></button>
+            <button class="side-btn" type="button" data-tab="worlds"><svg class="icon" aria-hidden="true"><use href="#i-world"/></svg><span>Worlds</span></button>
+            <button class="side-btn" type="button" data-tab="settings"><svg class="icon" aria-hidden="true"><use href="#i-gear"/></svg><span>Settings</span></button>
+            <div class="frame__user"><span class="status-dot" aria-hidden="true"></span><span data-player-name>Steve</span></div>
+          </aside>
+          <div class="frame__main">
+
+            <div class="panel" id="panel-play" role="tabpanel" aria-labelledby="tab-play" data-panel="play">
+              <h3 class="panel__heading">Welcome back, <span class="grad-text" data-player-name>Steve</span>.</h3>
+              <div class="panel-scene" aria-hidden="true"><i></i><i></i></div>
+              <div class="launch-bar">
+                <span class="launch-bar__meta"><span data-version-label>1.21.4</span> · <span data-ram-label>4</span> GB RAM</span>
+                <button class="btn btn--primary preview-launch" id="preview-launch" type="button">Launch</button>
+              </div>
+            </div>
+
+            <div class="panel" id="panel-worlds" role="tabpanel" aria-labelledby="tab-worlds" data-panel="worlds" hidden>
+              <div class="panel__row">
+                <h3 class="panel__heading">Your worlds</h3>
+                <button class="btn btn--ghost btn--sm" id="add-world" type="button">+ New</button>
+              </div>
+              <ul class="world-list" id="world-list"></ul>
+            </div>
+
+            <div class="panel" id="panel-settings" role="tabpanel" aria-labelledby="tab-settings" data-panel="settings" hidden>
+              <h3 class="panel__heading">Settings</h3>
+              <div class="setting-row">
+                <label for="set-ram">Memory</label>
+                <div class="setting-row__control"><input type="range" id="set-ram" min="1" max="16" step="1" value="4"><output id="ram-out" for="set-ram">4 GB</output></div>
+              </div>
+              <div class="setting-row">
+                <label for="set-fullscreen">Fullscreen</label>
+                <label class="switch"><input type="checkbox" id="set-fullscreen" checked><span class="switch__track" aria-hidden="true"></span></label>
+              </div>
+              <div class="setting-row">
+                <label for="set-snapshots">Snapshots</label>
+                <label class="switch"><input type="checkbox" id="set-snapshots" checked><span class="switch__track" aria-hidden="true"></span></label>
+              </div>
+              <div class="setting-row">
+                <label for="set-keepopen">Keep launcher open</label>
+                <label class="switch"><input type="checkbox" id="set-keepopen" checked><span class="switch__track" aria-hidden="true"></span></label>
+              </div>
+              <div class="setting-row">
+                <label for="set-theme">Accent</label>
+                <select id="set-theme" class="mini-select"><option value="ember">Ember</option><option value="ocean">Ocean</option><option value="end">End</option></select>
+              </div>
+              <div class="panel__row panel__row--end">
+                <button class="btn btn--ghost btn--sm" id="set-reset" type="button">Reset</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section" id="faq">
+    <div class="section-inner">
+      <header class="section-header" data-reveal>
+        <p class="section__label">Questions</p>
+        <h2 class="section__title">Before you press play.</h2>
+      </header>
+      <div class="faq-list" data-reveal>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false"><span>Is Pawn really free?</span><span class="faq-icon" aria-hidden="true"></span></button>
+          <div class="faq-a"><div class="faq-a__inner"><p>Yes — every feature, forever. No ads, no premium tier.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false"><span>Do I need a Minecraft account?</span><span class="faq-icon" aria-hidden="true"></span></button>
+          <div class="faq-a"><div class="faq-a__inner"><p>Yes. Sign in with your official Microsoft account.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false"><span>Does it support mods?</span><span class="faq-icon" aria-hidden="true"></span></button>
+          <div class="faq-a"><div class="faq-a__inner"><p>Vanilla, Fabric, Forge, Quilt, NeoForge and snapshots.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false"><span>Is it safe to install?</span><span class="faq-icon" aria-hidden="true"></span></button>
+          <div class="faq-a"><div class="faq-a__inner"><p>Signed installer, no bundled software, no background services.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false"><span>Which Windows versions?</span><span class="faq-icon" aria-hidden="true"></span></button>
+          <div class="faq-a"><div class="faq-a__inner"><p>Windows 10 and 11, 64-bit.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false"><span>How do updates work?</span><span class="faq-icon" aria-hidden="true"></span></button>
+          <div class="faq-a"><div class="faq-a__inner"><p>Run the new installer — settings and worlds carry over.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-strip">
+    <div class="cta-strip__board" aria-hidden="true"></div>
+    <div class="cta-strip__inner" data-reveal>
+      <button class="cta-pawn-btn" id="cta-pawn" type="button" aria-label="Pawn">
+        <svg class="cta-pawn" aria-hidden="true"><use href="#pawn"/></svg>
+      </button>
+      <h2>Ready to make your move?</h2>
+      <p>One download. One install. Every world.</p>
+      <button class="btn btn--primary btn--lg" type="button" data-open-download>
+        <svg class="icon" aria-hidden="true"><use href="#i-dl"/></svg>Download Pawn Launcher</button>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <svg class="footer__pawn" aria-hidden="true"><use href="#pawn"/></svg>
+      <span class="logo-word">Pawn<span class="logo-word__accent">Launcher</span></span>
+    </div>
+    <nav class="footer__links" aria-label="Footer">
+      <a href="#features">Features</a><a href="#preview">Preview</a><a href="#faq">FAQ</a>
+      <a href="PawnLauncher_Setup.exe" download data-download-link>Download</a>
+    </nav>
+    <p class="footer__legal">Not affiliated with Mojang or Microsoft.</p>
+    <p class="footer__copy">© <span id="year">2026</span> Pawn Launcher</p>
+  </div>
+</footer>
+
+<!-- DOWNLOAD MODAL -->
+<div class="modal-overlay" id="download-modal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
+    <button class="modal__close" id="modal-close" type="button" aria-label="Close dialog">
+      <svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></button>
+    <svg class="modal__pawn" aria-hidden="true"><use href="#pawn"/></svg>
+    <h2 class="modal__title" id="modal-title">Download <span class="grad-text">Pawn Launcher</span></h2>
+    <a class="btn btn--primary modal__dl-btn" href="PawnLauncher_Setup.exe" download data-download-link>
+      <svg class="icon" aria-hidden="true"><use href="#i-dl"/></svg>Download for Windows</a>
+    <div class="modal__meta">
+      <span class="modal__tag"><svg class="icon icon--tiny" aria-hidden="true"><use href="#i-win"/></svg>Windows 10/11</span>
+      <span class="modal__tag modal__tag--free">Free</span>
+    </div>
+  </div>
+</div>
+
+<div class="toast-stack" id="toast-stack" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
